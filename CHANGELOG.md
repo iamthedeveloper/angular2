@@ -1,7 +1,7 @@
 ## Angular Documentation QuickStart Changelog
 Upgraders: for a fresh start, consider running these commands 
-* `git clean -xdf` 
-* `npm install`
+* 'git clean -xdf' 
+* 'npm install'
 
 <a name="0.4.1"></a>
 # 0.4.1 (2017-03-24)
@@ -17,7 +17,7 @@ Upgraders: for a fresh start, consider running these commands
 
 <a name="0.2.22"></a>
 # 0.2.22 (2017-01-05)
-* Add `non-essential-files.txt` and instructions to use it to README
+* Add 'non-essential-files.txt' and instructions to use it to README
 
 <a name="0.2.21"></a>
 # 0.2.21 (2016-12-14)
@@ -29,14 +29,14 @@ Upgraders: for a fresh start, consider running these commands
 
 <a name="0.2.19"></a>
 # 0.2.19 (2016-11-30)
-* remove upgrade mappings from `systemjs.config.js` PR #301
+* remove upgrade mappings from 'systemjs.config.js' PR #301
 
 <a name="0.2.18"></a>
 # 0.2.18 (2016-11-30)
-* remove `exclude` clause from `tsconfig.json`; it was just confusing people
+* remove 'exclude' clause from 'tsconfig.json'; it was just confusing people
 * karma.config + karma-test-shim can handle multiple spec source paths (issue #294)
-* cosmetic `app.component.spec.ts` changes
-* cosmetic `karma.config.js` changes
+* cosmetic 'app.component.spec.ts' changes
+* cosmetic 'karma.config.js' changes
 
 <a name="0.2.17"></a>
 # 0.2.17 (2016-11-16)
@@ -45,7 +45,7 @@ Upgraders: for a fresh start, consider running these commands
   * removed wallaby
   * shrink styles.css
   * refine tsconfig.json
-  * `AppComponent` uses interpolation
+  * 'AppComponent' uses interpolation
 
 <a name="0.2.16"></a>
 # 0.2.16 (2016-11-14)
@@ -63,7 +63,7 @@ Upgraders: for a fresh start, consider running these commands
 <a name="0.2.13"></a>
 # 0.2.13 (2016-10-20)
 * Protractor 4
-* Move from `typings` to `@types`. See `tsconfig.json` changes.
+* Move from 'typings' to '@types'. See 'tsconfig.json' changes.
 * Angular v2.1.1
 
 <a name="0.2.12"></a>
