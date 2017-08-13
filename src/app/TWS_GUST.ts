@@ -1,2 +1,0 @@
-interface TWS_GUST {
-}
