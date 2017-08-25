@@ -1,28 +1,31 @@
- import { WeatherService } from './app.service.weather';
- import { Component, OnInit } from '@angular/core';
- import {JsonConvert, OperationMode, ValueCheckingMode} from 'json2typescript';
- 
- import { IWeatherWeekData } from './weather';
-  
-  @Component({
-    selector: 'my-app',
-   providers: [WeatherService],
-   //template: `<h1>Hello {{name}}</h1>`,
-   templateUrl: `./partials/app.component.table.html`,
-   styleUrls: ['./css/app.component.style.css'],
-  })
- export class AppComponent {
-   name = 'Angular ' + new Date().getDate();
-   //api: http://api.oceandrivers.com/v1.0/getSocibWeatherStation/mclean/lastday/
-   //Period: lastdata | lasthour | lastday
- 
-   iWeatherWeekData: IWeatherWeekData;
- 
- 
-   ngOnInit(): void {
-     this._WeatherService.getweatherWeeklyData()
-       .subscribe(iWeatherWeekData => this.iWeatherWeekData = iWeatherWeekData);
-   }
-   constructor(private _WeatherService: WeatherService) {
-   }
- } 
+import { IWeatherData } from './IWeatherData';
+import { WeatherService } from './app.service.weather';
+import { Component } from '@angular/core';
+import 'rxjs/add/operator/map';
+//8d55b1fea347ef26
+
+
+@Component({
+  selector: 'my-app',
+  providers: [WeatherService],
+  templateUrl: `./partials/app.component.table.html`,
+  styleUrls: ['./css/app.component.style.css'],
+})
+export class AppComponent {
+
+  iWeatherWeekData: IWeatherData | null;
+
+  ngOnInit(): void {
+    console.log('In Controller');
+    try {
+      this._WeatherService.getweatherWeeklyData()
+      .subscribe((response) => {
+        this.iWeatherWeekData = response;
+      });
+    } catch (e) {
+        console.log('exception in component ', e.description);
+    }
+  }
+  constructor(private _WeatherService: WeatherService) {
+  }
+}
