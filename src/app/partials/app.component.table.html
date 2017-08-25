@@ -1,8 +1,24 @@
-<div class='top'>
-    <div class='dashboard'>DashBoard</div>
-    <div>
-        <button type="button" class="btn center" (click) = 'getFlightStatus()'>Flight Status</button>
-        <button type="button" class="btn btn-default center">Other</button>
-        <button type="button" class="btn btn-primary center">Primary</button>
-    </div>
-</div>
+<table border="1">
+    <thead>
+        <td colspan="2">Day</td>
+        <td>Description</td>
+        <td>Feels Like</td>
+        <td>Temperature</td>
+        <td>Humidity</td>
+        <td>Wind Speed</td>
+    </thead>
+    <tr *ngFor="let hourlyInfo of iWeatherWeekData?.hourly_forecast">
+        <td>
+            <div>{{hourlyInfo.FCTTIME.mday}} {{hourlyInfo.FCTTIME.weekday_name_abbrev}} </div>
+            <div>{{hourlyInfo.FCTTIME.hour}} {{hourlyInfo.FCTTIME.ampm}}</div>
+        </td>
+        <td>
+            <img src={{hourlyInfo.icon_url}} alt={{hourlyInfo.wx}} title={{hourlyInfo.wx}}/>
+        </td>
+        <td> {{hourlyInfo.wx}} </td>
+        <td> {{hourlyInfo.feelslike.english}} </td>
+        <td> {{hourlyInfo.temp.english}} </td>
+        <td> {{hourlyInfo.humidity}} </td>
+        <td> {{hourlyInfo.wdir.degrees}} {{hourlyInfo.wdir.dir}} </td>
+    </tr>
+</table>
