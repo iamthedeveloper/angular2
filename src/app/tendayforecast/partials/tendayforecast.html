@@ -1,0 +1,40 @@
+<svg width="300px" height="150px">
+    <rect x="20" y="20" width="20px" height="20" rx="5" ry="5" />
+    <rect x="60" y="20" width="20px" height="20" rx="5" ry="5" />
+    <rect x="100" y="20" width="20px" height="20" rx="5" ry="5"/>
+</svg>
+<table border="1">
+    <caption> Next Tenday weather Forecast Info </caption>
+    <thead>
+        <td>Day</td>
+        <td>Condition</td>
+        <td>Humidity</td>
+        <td>Temparature</td>
+        <td>Wind</td>
+    </thead>
+    <tr *ngFor="let simpleforecast of iWeatherTendayforecastData?.forecast.simpleforecast.forecastday;
+                let txtforecastday of iWeatherTendayforecastData?.forecast.txt_forecast.forecastday;">
+        <td>
+            <div>{{simpleforecast.date.day}} {{simpleforecast.date.monthname_short}}</div>
+            <div>{{simpleforecast.date.hour}} {{simpleforecast.date.ampm}}</div>
+        </td>
+        <td>
+            <div>
+                <img src={{simpleforecast.icon_url}}  title={{simpleforecast.icon}} alt={{simpleforecast.icon}}/> 
+            </div>
+            <!-- <div>
+                <img src={{txtforecastday.icon_url}}  title={{txtforecastday.icon}} alt={{txtforecastday.icon}}/>
+            </div> -->
+        </td>
+        <td> 
+            <div>{{simpleforecast.minhumidity}} ~ {{simpleforecast.maxhumidity}}</div>
+        </td>
+        <td> 
+            <div>{{simpleforecast.low.fahrenheit}} ~ {{simpleforecast.high.fahrenheit}}</div>
+        </td>
+        <td> 
+            <div>{{simpleforecast.maxwind.mph}}  {{simpleforecast.maxwind.dir}}</div>
+        </td>
+    </tr>
+</table>
+

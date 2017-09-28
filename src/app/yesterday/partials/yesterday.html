@@ -1,0 +1,54 @@
+<svg width="300px" height="150px">
+    <rect x="20" y="20" width="20px" height="20" rx="5" ry="5" />
+    <rect x="60" y="20" width="20px" height="20" rx="5" ry="5" />
+    <rect x="100" y="20" width="20px" height="20" rx="5" ry="5"/>
+</svg>
+<table border="1">
+    <caption> Shows Yesterdays Weather Info</caption>
+    <thead>
+        <td>Day</td>
+        <td>Condition</td>
+        <td>Humidity</td>
+        <td>Temparature</td>
+        <td>Wind</td>
+    </thead>
+    <tr *ngFor="let observation of iWeatheryesterday?.history.observations;">
+        <td>
+            <div>{{observation.date.mon}}/{{observation.date.mday}}</div>
+            <div>{{observation.date.hour}}:{{observation.date.min}}</div>
+        </td>
+        <td>
+            <div>
+                <img *ngIf="observation.icon == 'clear'"  src="http://icons.wxug.com/i/c/k/clear.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'partlycloudy'"  src="http://icons.wxug.com/i/c/k/partlycloudy.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'mostlycloudy'"  src="http://icons.wxug.com/i/c/k/mostlycloudy.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'overcast'"  src="http://icons.wxug.com/i/c/k/nt_cloudy.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'fog'"  src="http://icons.wxug.com/i/c/k/nt_fog.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'scatteredclouds'"  src="http://icons.wxug.com/i/c/k/partlycloudy.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'chanceflurries'"  src="http://icons.wxug.com/i/c/k/chanceflurries.gif"alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'chancerain'"  src="http://icons.wxug.com/i/c/k/chancerain.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'chancesleet'"  src="http://icons.wxug.com/i/c/k/chancesleet.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'chancesnow'"  src="http://icons.wxug.com/i/c/k/chancesnow.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'chancetstorms'"  src="http://icons.wxug.com/i/c/k/chancetstorms.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'flurries'"  src="http://icons.wxug.com/i/c/k/flurries.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'hazy'"  src="http://icons.wxug.com/i/c/k/hazy.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'sleet'"  src="http://icons.wxug.com/i/c/k/sleet.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'snow'"  src="http://icons.wxug.com/i/c/k/snow.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'sunny'"  src="http://icons.wxug.com/i/c/k/sunny.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'tstorms'"  src="http://icons.wxug.com/i/c/k/tstorms.gif" alt={{observation.icon}} title={{observation.icon}}>
+                <img *ngIf="observation.icon == 'cloudy'"  src="http://icons.wxug.com/i/c/k/cloudy.gif" alt={{observation.icon}} title={{observation.icon}}>
+            </div>
+        </td>
+        <td>
+            <div>{{observation.hum}}</div>
+        </td>
+        <td>
+            <div>{{observation.tempi}}</div>
+        </td>
+        <td>
+            <div>{{observation.wspdm}}</div>
+        </td>
+
+    </tr>
+</table>
+

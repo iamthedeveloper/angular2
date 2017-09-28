@@ -1,0 +1,52 @@
+div{
+    /* width: 60%; */
+    margin: auto;
+    display: flex;
+    /* padding: 10px; */
+}
+.top {
+    border: 3px solid rgba(226, 167, 56, 0.99);
+    width: 98%;
+    height: auto;
+    display: grid;
+}
+.center {
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid rgba(56, 130, 226, 0.99);
+    font-size: medium;
+    font-family: -webkit-pictograph;
+}
+.dashboard {
+    margin: auto;
+    width: 20%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid #2b8ce2;
+    display: block;
+    background-color: rgba(119, 127, 136, 0.99);
+    color: #ffb500;
+    font-weight: bolder;
+}
+table {
+    margin: auto;
+    width: 42%;
+}
+thead {
+    text-align: center;
+    font-weight: bold;
+}
+
+tbody {
+    text-align: center;
+}
+td {
+    padding: 5px;
+}
+caption {
+    font-size: x-large;
+    padding: 14px;
+}
