@@ -39,9 +39,7 @@
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
     "zone.js": "^0.8.4",
-    "@reactivex/rxjs": "^5.1.0",
-    "@types/d3": "^4.7.0",
-    "d3": "^4.7.0"
+    "@reactivex/rxjs": "^5.1.0"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.36",
@@ -63,3 +61,5 @@
   },
   "repository": {}
 }
+
+

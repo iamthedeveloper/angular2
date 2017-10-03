@@ -3,7 +3,7 @@ import { IHourlyForecast } from './threedayforecast/model/IThreeDayForecastData'
 import { ThreeDayWeatherForecastService } from './threedayforecast/service/service.threedayforecast';
 import { Component } from '@angular/core';
 import 'rxjs/add/operator/map';
-import * as d3 from 'd3';
+//import * as d3 from 'd3';
 //import * as Moment from 'moment';
 
 //8d55b1fea347ef26
@@ -29,8 +29,8 @@ export default class ThreeDayForecastComponent {
     } catch (e) {
         console.log('exception in component ', e.description);
     }
-    const square = d3.selectAll('rect');
-    square.style('fill', 'orange');
+//    const square = d3.selectAll('rect');
+//    square.style('fill', 'orange');
   }
   constructor(private _WeatherService: ThreeDayWeatherForecastService) {
   }

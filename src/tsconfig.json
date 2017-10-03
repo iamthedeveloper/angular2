@@ -8,13 +8,12 @@
     "experimentalDecorators": true,
     "lib": [ "es2015", "dom" ],
     "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "types": [
-      "d3"
-    ]
+    "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
 ]
 }
+
+
