@@ -2,7 +2,6 @@ import { IHourlyWeatherData } from './hourly/model/IHourlyWeatherData';
 import { HourlyWeatherService } from './hourly/service/app.service.hourly.weather';
 import { Component } from '@angular/core';
 import 'rxjs/add/operator/map';
-//import * as d3 from 'd3';
 //8d55b1fea347ef26
 
 
@@ -15,17 +14,23 @@ import 'rxjs/add/operator/map';
 export default class HourlyComponent {
 
   iWeatherHourlyData: IHourlyWeatherData | null;
-
+  options: Object;
+  temperature: number[] = [];
   ngOnInit(): void {
     console.log('In HourlyComponent Controller');
     try {
-//      const square = d3.selectAll('rect');
+      const sChartTitle = 'Hourly Temperature';
       this._WeatherService.getHourlyWeatherData()
       .subscribe((response) => {
         this.iWeatherHourlyData = response;
-        //this.parseDataForChart();
+        this.parseDataForChart();
+        this.options = {
+          title : { text : sChartTitle },
+          series: [{
+            data: this.temperature
+          }]
+        };
       });
-//      square.style('fill', 'green');
     } catch (e) {
         console.log('exception in component ', e.description);
     }
@@ -33,10 +38,9 @@ export default class HourlyComponent {
   constructor(private _WeatherService: HourlyWeatherService) {
   }
 
-  parseDataForChart():void {
+  parseDataForChart(): void {
     for (let item of this.iWeatherHourlyData.hourly_forecast) {
-      console.log(item.FCTTIME.hour);
-      console.log(item.temp.english);
+      this.temperature.push(parseInt(item.temp.english));
     }
   }
 }

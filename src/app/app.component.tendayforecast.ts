@@ -1,9 +1,7 @@
 import TenDayForecastWeatherService from './tendayforecast/service/service.tendaysforecast';
 import {ITendayWeatherForecast} from './tendayforecast/model/ITendayWeatherForecast';
-
 import { Component } from '@angular/core';
 import 'rxjs/add/operator/map';
-//import * as d3 from 'd3';
 //8d55b1fea347ef26
 
 
@@ -16,17 +14,23 @@ import 'rxjs/add/operator/map';
 export default class TenDayForecastComponent {
 
   iWeatherTendayforecastData: ITendayWeatherForecast | null;
-
+  options: Object;
+  temperature: number[] = [];
   ngOnInit(): void {
     console.log('In 10 Day Controller');
     try {
-//      const square = d3.selectAll('rect');
+      const sChartTitle = "Ten Day's forecast Temperature";
       this._WeatherService.getTenDayForecastData()
         .subscribe((response) => {
           this.iWeatherTendayforecastData = response;
-          //        this.parseDataForChart();
+          this.parseDataForChart();
+          this.options = {
+              title : { text : sChartTitle },
+              series: [{
+                data: this.temperature
+              }]
+            };
         });
-//      square.style('fill', 'green');
     } catch (e) {
       console.log('exception in TenDayForecastComponent ', e.description);
     }
@@ -34,10 +38,9 @@ export default class TenDayForecastComponent {
   constructor(private _WeatherService: TenDayForecastWeatherService) {
   }
 
-  //   parseDataForChart():void {
-  //     for (let item of this.iWeatherTendayData.hourly_forecast) {
-  //       console.log(item.FCTTIME.hour);
-  //       console.log(item.temp.english);
-  //     }
-  //   }
+  parseDataForChart(): void {
+    for (let item of this.iWeatherTendayforecastData.hourly_forecast) {
+        this.temperature.push(parseInt(item.temp.english));
+    }
+}
 }

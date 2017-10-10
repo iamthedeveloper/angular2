@@ -1,4 +1,4 @@
-// This is Used for TenDayHourly Service
+// This is Used for TenDayForecast Service
 
 export interface IHourlyWeatherData {
     hourly_forecast: Array<IWeatherHourlyForecast>;
@@ -69,14 +69,10 @@ export interface IWeatherHourlyFCTIME {
         weekday_name_unlang: string;
         yday: string;
         year: string;
-    
     }
 
     export interface IWeatherHourlyStandardMetric {
         english: string;
         metric: string;
     }
-    
-    
-
 

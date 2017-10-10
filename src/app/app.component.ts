@@ -8,6 +8,8 @@ import DynamicComponent from './app.component.dynamic';
 import TenDayHourlyComponent from './app.component.tendayhourly';
 import YesterdayComponent from './app.component.yesterday';
 import TenDayForecastComponent from './app.component.tendayforecast';
+import { ChartModule } from 'angular2-highcharts';
+
 
 //8d55b1fea347ef26
 
@@ -86,7 +88,7 @@ export default class AppComponent {
 }
 
 @NgModule({
-  imports:      [ BrowserModule, HttpModule ],
+  imports:      [ BrowserModule, HttpModule, ChartModule.forRoot(require('highcharts')) ],
   declarations: [ AppComponent, DynamicComponent, HourlyComponent, ThreeDayForecastComponent,
     TenDayHourlyComponent, YesterdayComponent, TenDayForecastComponent],
   bootstrap:    [ AppComponent ]
