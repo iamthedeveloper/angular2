@@ -32,14 +32,15 @@
     "@angular/platform-browser": "~4.0.0",
     "@angular/platform-browser-dynamic": "~4.0.0",
     "@angular/router": "~4.0.0",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.22",    
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.22",
+    "@reactivex/rxjs": "^5.1.0",
     "angular-in-memory-web-api": "~0.3.0",
+    "angular2-highcharts": "^0.5.5",
     "core-js": "^2.4.1",
     "moment": "^2.15.0",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
-    "zone.js": "^0.8.4",
-    "@reactivex/rxjs": "^5.1.0"
+    "zone.js": "^0.8.4"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.36",
@@ -61,5 +62,3 @@
   },
   "repository": {}
 }
-
-
