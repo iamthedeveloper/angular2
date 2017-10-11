@@ -19,21 +19,43 @@ export default class Yesterday {
     iWeatheryesterday: IYesterday | null;
     options: Object;
     temperature: number[] = [];
+    snow: number[] = [];
+    windspeed: number[] = [];
+    humidity: number[] = [];
     ngOnInit(): void {
     console.log('In Controller');
     try {
-        const sChartTitle = "Yesterday's Temperature";
+        const sChartTitle = "Temperature";
+        const windspeed = "Wind Speed";
+        const snow = "Snow";
+        const humidity = "Humidity";
         this._WeatherService.getYesterdayData()
         .subscribe((yestedayResponse) => {
         console.log(yestedayResponse.history.observations[0].heatindexi);
         this.iWeatheryesterday = yestedayResponse;
         this.parseDataForChart();
         this.options = {
-            title : { text : sChartTitle },
-            series: [{
-              data: this.temperature
-            }]
-          };
+            title : { text : 'Yesterday' },
+            series: [
+              {
+                name: sChartTitle,
+                data: this.temperature,
+              },
+              {
+                name: windspeed,
+                data: this.windspeed,
+              },
+              {
+                name: humidity,
+                data: this.humidity,
+              },
+              {
+                name: snow,
+                data: this.snow,
+              }
+
+            ]
+        };
         });
     } catch (e) {
         console.log('exception in component ', e.description);
@@ -45,6 +67,15 @@ export default class Yesterday {
     parseDataForChart(): void {
         for (let item of this.iWeatheryesterday.history.observations) {
             this.temperature.push(parseInt(item.tempi));
+        }
+        for (let item of this.iWeatheryesterday.history.observations) {
+            this.snow.push(parseInt(item.snow));
+        }
+        for (let item of this.iWeatheryesterday.history.observations) {
+            this.windspeed.push(parseInt(item.wspdi));
+        }
+        for (let item of this.iWeatheryesterday.history.observations) {
+            this.humidity.push(parseInt(item.hum));
         }
     }
 }
