@@ -68,13 +68,13 @@ export default class ThreeDayForecastComponent {
         this.temperature.push(parseInt(item.high.celsius));
     }
     for (let item of this.iWeatherHourlyForecast.simpleforecast.forecastday) {
-      this.snow.push(parseInt(item.snow_allday.in));
+        this.snow.push(item.snow_allday.in);
     }
     for (let item of this.iWeatherHourlyForecast.simpleforecast.forecastday) {
-      this.windspeed.push(parseInt(item.avewind.mph));
+        this.windspeed.push(item.avewind.mph);
     }
     for (let item of this.iWeatherHourlyForecast.simpleforecast.forecastday) {
-      this.humidity.push(parseInt(item.avehumidity));
+        this.humidity.push(item.avehumidity);
     }
 }
 }
