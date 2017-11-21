@@ -1,0 +1,116 @@
+# .DS_Store
+.DS_Store
+
+# /node_modules
+/node_modules/*
+
+# hourly model and service
+
+# /src/app/hourly/model
+/src/app/hourly/model/*
+
+# /src/app/hourly/service
+/src/app/hourly/service/*
+
+# tendayforecast model and service
+
+# /src/app/tendayforecast/model
+/src/app/tendayforecast/model/*
+
+# /src/app/tendayforecast/service
+/src/app/tendayforecast/service/*
+
+# tendayhourly model and service
+
+# /src/app/tendayhourly/model
+/src/app/tendayhourly/model/*
+
+# /src/app/tendayhourly/service
+/src/app/tendayhourly/service/*
+
+# tendayforecast model and service
+
+# /src/app/tendayforecast/model
+/src/app/tendayforecast/model/*
+
+# /src/app/tendayforecast/service
+/src/app/tendayforecast/service/*
+
+# threedayforecast model and service
+
+# /src/app/threedayforecast/model
+/src/app/threedayforecast/model/*
+
+# /src/app/threedayforecast/service
+/src/app/threedayforecast/service/*
+
+# yesterday model and service
+
+# /src/app/yesterday/model
+/src/app/yesterday/model/*
+
+# /src/app/yesterday/service
+/src/app/yesterday/service/*
+
+# /src/main.js
+/src/main.js
+
+# /src/main.js.map
+/src/main.js.map
+
+# /src/app/yesterday/service.yesterdayweather.js.map
+/src/app/yesterday/service.yesterdayweather.js.map
+
+# /src/app/yesterday/service.yesterdayweather.js
+/src/app/yesterday/service.yesterdayweather.js
+
+# /src/app/yesterday/IYesterday.js.map
+/src/app/yesterday/IYesterday.js.map
+
+# /src/app/yesterday/IYesterday.js
+/src/app/yesterday/IYesterday.js
+
+# /src/app/app.component.yesterday.js.map
+/src/app/app.component.yesterday.js.map
+
+# /src/app/app.component.yesterday.js
+/src/app/app.component.yesterday.js
+
+# /src/app/app.component.threedayforecast.js.map
+/src/app/app.component.threedayforecast.js.map
+
+# /src/app/app.component.threedayforecast.js
+/src/app/app.component.threedayforecast.js
+
+# /src/app/app.component.tendayhourly.js.map
+/src/app/app.component.tendayhourly.js.map
+
+# /src/app/app.component.tendayhourly.js
+/src/app/app.component.tendayhourly.js
+
+# /src/app/app.component.tendayforecast.js.map
+/src/app/app.component.tendayforecast.js.map
+
+# /src/app/app.component.tendayforecast.js
+/src/app/app.component.tendayforecast.js
+
+# /src/app/app.component.js.map
+/src/app/app.component.js.map
+
+# /src/app/app.component.js
+/src/app/app.component.js
+
+# /src/app/app.component.hourly.js.map
+/src/app/app.component.hourly.js.map
+
+# /src/app/app.component.hourly.js
+/src/app/app.component.hourly.js
+
+# /src/app/app.component.dynamic.js.map
+/src/app/app.component.dynamic.js.map
+
+# /src/app/app.component.dynamic.js
+/src/app/app.component.dynamic.js
+
+# /npm-debug.log.*
+/npm-debug.log.*
