@@ -4,3 +4,4 @@ You need to have node 6.x npm 2.x
 Clone the project
 npm install
 npm start
+Please use typescript 2.4.0 of you encouunter ts compiler error.
