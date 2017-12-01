@@ -5,3 +5,4 @@ Clone the project \n
 npm install \n
 npm start \n
 Please use typescript 2.4.0 of you encouunter ts compiler error. \n
+https://user-images.githubusercontent.com/7699569/33507071-b26a9cf2-d6c0-11e7-93d1-c727ea67f6e9.png
