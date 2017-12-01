@@ -6,4 +6,6 @@ npm install
 npm start
 Please use typescript 2.4.0 of you encouunter ts compiler error.
 
+![Alt text](https://github.com/iamthedeveloper/angular2/blob/master/Angular%204%20with%20HighCharts_1.png?raw=true "Title")
 ![Alt text](https://github.com/iamthedeveloper/angular2/blob/master/Angular%204%20with%20HIghcharts.png?raw=true "Title")
+
